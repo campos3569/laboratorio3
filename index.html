@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>McLaren Deportivos - Concesionario Oficial</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo"><img src="img/logo.webp"></div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#modelos">Modelos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="vision.html">vision</a></li>
+            </ul>
+            <div class="mobile-menu-toggle" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="mobile-menu" id="mobileMenu">
+                <ul>
+                    <li><a href="#inicio" onclick="closeMobileMenu()">Inicio</a></li>
+                    <li><a href="#modelos" onclick="closeMobileMenu()">Modelos</a></li>
+                    <li><a href="#contacto" onclick="closeMobileMenu()">Contacto</a></li>
+                    <li><a href="vision.html" onclick="closeMobileMenu()">vision</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>McLaren Deportivos</h1>
+            <p>Experimenta la velocidad pura con los superdeportivos más exclusivos del mundo</p>
+            <a href="#modelos" class="cta-button">Ver Colección</a>
+        </div>
+    </section>
+    <section class="section" id="modelos">
+        <h2>Nuestra Colección</h2>
+        <div class="cars-grid">
+            <div class="car-card">
+                <div class="car-image">McLaren 720S</div>
+                <div class="car-info">
+                    <h3>McLaren 720S</h3>
+                    <div class="price">$299,000 / Q2,290,340</div>
+                    <div class="specs">
+                        <span>710 HP</span>
+                        <span>0-100: 2.9s</span>
+                        <span>341 km/h</span>
+                    </div>
+                    <p>Motor V8 biturbo de 4.0L, fibra de carbono MonoCell III</p>
+                    <a href="#contacto" class="cta-button" style="font-size: 0.9rem; padding: 10px 20px;">Solicitar Info</a>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-image">McLaren Artura</div>
+                <div class="car-info">
+                    <h3>McLaren Artura</h3>
+                    <div class="price">$233,000 / Q1,784,780</div>
+                    <div class="specs">
+                        <span>671 HP</span>
+                        <span>0-100: 3.0s</span>
+                        <span>330 km/h</span>
+                    </div>
+                    <p>Híbrido V6 biturbo, tecnología eléctrica de nueva generación</p>
+                    <a href="#contacto" class="cta-button" style="font-size: 0.9rem; padding: 10px 20px;">Solicitar Info</a>
+                </div>
+            </div>
+            <div class="car-card">
+                <div class="car-image">McLaren 765LT</div>
+                <div class="car-info">
+                    <h3>McLaren 765LT</h3>
+                    <div class="price">$358,000 / Q2,742,280</div>
+                    <div class="specs">
+                        <span>755 HP</span>
+                        <span>0-100: 2.8s</span>
+                        <span>330 km/h</span>
+                    </div>
+                    <p>Longtail más extremo, aerodinamática activa avanzada</p>
+                    <a href="#contacto" class="cta-button" style="font-size: 0.9rem; padding: 10px 20px;">Solicitar Info</a>
+                </div>
+            </div>
+    </section>
+    <section class="section" id="contacto">
+        <h2>Contacta con Nosotros</h2>
+        <form action="https://formspree.io/f/mblkvbyo" method="POST">
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>           
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" required>
+            </div>           
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>          
+            <div class="form-group">
+                <label for="modelo">Modelo de Interés</label>
+                <select id="modelo" name="modelo" required>
+                    <option value="">Selecciona un modelo</option>
+                    <option value="720S">McLaren 720S</option>
+                    <option value="Artura">McLaren Artura</option>
+                    <option value="765LT">McLaren 765LT</option>
+                </select>
+            </div>          
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos más sobre tus necesidades..."></textarea>
+            </div>
+            <button type="submit" class="cta-button">Enviar Consulta</button>
+        </form>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h4>McLaren Deportivos</h4>
+                <p>Concesionario oficial McLaren</p>
+                <p>Zona 10, Ciudad de Guatemala</p>
+                <p>Tel: +502 4823-1478</p>
+            </div>           
+            <div>
+                <h4>Servicios</h4>
+                <p>Venta de vehículos nuevos</p>
+                <p>Vehículos certificados</p>
+                <p>Servicio técnico especializado</p>
+                <p>Repuestos originales</p>
+            </div>
+            <div>
+                <h4>Horarios</h4>
+                <p>Lunes a Viernes: 8:00 - 18:00</p>
+                <p>Sábados: 8:00 - 16:00</p>
+                <p>Domingos: Solo con cita previa</p>
+            </div>
+        </div>
+        <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #333;">
+            <p>&copy; 2025 McLaren Deportivos. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
